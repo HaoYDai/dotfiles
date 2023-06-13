@@ -27,3 +27,25 @@ set -gx PATH ~/.local/bin $PATH
 fish_add_path --path /opt/homebrew/bin
 export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
 
+# NVM
+function __check_rvm --on-variable PWD --description "Do nvm stuff"
+  status --is-command-substitution; and return
+
+  if test -f .nvmrc; and test -r .nvmrc;
+    nvm use
+  else
+  end
+end
+
+# exa
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+end
+
+set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
+if test -f $LOCAL_CONFIG
+  source $LOCAL_CONFIG
+end
+
+
