@@ -1,3 +1,5 @@
 -- lazy.nvim plugin manager
-require("lazyvim")
+require("config/lazy")
+
+require("config/base")
 
