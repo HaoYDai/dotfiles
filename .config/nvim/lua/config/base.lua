@@ -25,7 +25,7 @@ set.smarttab = true
 set.breakindent = true
 set.shiftwidth = 2
 set.tabstop = 2
-set.wrap = false -- No Wrap lines
+set.wrap = false         -- No Wrap lines
 set.backspace = { 'start', 'eol', 'indent' }
 set.path:append { '**' } -- Finding files - Search down into subfolders
 set.wildignore:append { '*/node_modules/*' }

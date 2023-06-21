@@ -1,7 +1,15 @@
 return {
+  {
+    "svrana/neosolarized.nvim",
+    dependencies = {
+      'tjdevries/colorbuddy.nvim'
+    }
+  },
+
+
   -- Telescope
   {
-    cmd = "Telescope",
+    --    cmd = "Telescope",
     'nvim-telescope/telescope.nvim',
     tag = '0.1.1',
     dependencies = { 'nvim-lua/plenary.nvim' }
@@ -13,17 +21,17 @@ return {
 
   -- LSP
   {
-    event = "VeryLazy",
+    --   event = "VeryLazy",
     "williamboman/mason.nvim",
     build = ":MasonUpdate", -- :MasonUpdate updates registry contents
   },
   {
-    event = "VeryLazy",
+    --  event = "VeryLazy",
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason-lspconfig.nvim" }
   },
   {
-    event = "VeryLazy",
+    -- event = "VeryLazy",
     "hrsh7th/nvim-cmp",
     dependencies = {
       "neovim/nvim-lspconfig",
@@ -38,9 +46,6 @@ return {
   {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
-    config = function()
-      require("lspsaga").setup({})
-    end,
     dependencies = {
       { "nvim-tree/nvim-web-devicons" },
       --Please make sure you install markdown and markdown_inline parser
