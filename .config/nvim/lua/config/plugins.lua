@@ -53,6 +53,11 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" }
   },
   {
+    'akinsho/bufferline.nvim',
+    version = "*",
+    dependencies = 'nvim-tree/nvim-web-devicons'
+  },
+  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup({
