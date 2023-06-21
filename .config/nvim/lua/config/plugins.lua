@@ -1,8 +1,9 @@
-return {  
+return {
   -- Telescope
   {
     cmd = "Telescope",
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   {
@@ -29,7 +30,13 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
-      "hrsh7th/cmp-cmdline"
+      "hrsh7th/cmp-cmdline",
+      "onsails/lspkind.nvim"
     }
+  },
+
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
   },
 }
