@@ -1,16 +1,3 @@
-return {
-  {
-    "svrana/neosolarized.nvim",
-    dependencies = {
-      'tjdevries/colorbuddy.nvim'
-    }
-  },
-  {
-    'kyazdani42/nvim-tree.lua',
-    dependencies = 'kyazdani42/nvim-web-devicons'
-  },
-
-
   -- Telescope
   {
     --    cmd = "Telescope",
@@ -74,4 +61,3 @@ return {
       })
     end
   }
-}
