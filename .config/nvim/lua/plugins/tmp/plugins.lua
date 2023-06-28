@@ -11,16 +11,7 @@
   },
 
   -- LSP
-  {
-    --   event = "VeryLazy",
-    "williamboman/mason.nvim",
-    build = ":MasonUpdate", -- :MasonUpdate updates registry contents
-  },
-  {
-    --  event = "VeryLazy",
-    "neovim/nvim-lspconfig",
-    dependencies = { "williamboman/mason-lspconfig.nvim" }
-  },
+
   {
     -- event = "VeryLazy",
     "hrsh7th/nvim-cmp",
@@ -44,15 +35,6 @@
     }
   },
 
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "kyazdani42/nvim-web-devicons" }
-  },
-  {
-    'akinsho/bufferline.nvim',
-    version = "*",
-    dependencies = 'kyazdani42/nvim-web-devicons'
-  },
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
