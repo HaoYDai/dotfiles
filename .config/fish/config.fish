@@ -23,10 +23,6 @@ set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 
-# Homebrew
-fish_add_path --path /opt/homebrew/bin
-export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
-
 # NVM
 function __check_rvm --on-variable PWD --description "Do nvm stuff"
   status --is-command-substitution; and return
@@ -48,4 +44,11 @@ if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
 
+switch (uname)
+  case Darwin
+    source (dirname (status --current-filename))/config-osx.fish
+  case Linux
+    source (dirname (status --current-filename))/config-linux.fish
+  case '*'
+end
 
