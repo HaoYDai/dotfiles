@@ -18,6 +18,9 @@ window:
 
 live_config_reload: true
 
+scrolling:
+  history: 0
+
 font:
   normal: 
     family: Hack Nerd Font
