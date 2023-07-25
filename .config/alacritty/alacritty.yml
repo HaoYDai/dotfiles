@@ -1,26 +1,21 @@
 env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
 window:
   decorations: buttonless
   padding:
-    x: 6
-    x: 6
-
+    x: 5
+    y: 5
   dynamic_padding: false
   opacity: 0.9
 
 live_config_reload: true
 
 scrolling:
-  history: 10000
-  multiplier: 3
+  history: 2000
+  multiplier: 20
+  faux_multiplier: 100
+  auto_scroll: true
 
 font:
   normal: 
