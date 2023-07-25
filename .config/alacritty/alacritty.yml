@@ -8,7 +8,7 @@ env:
   TERM: xterm-256color
 
 window:
-  decorations: "buttonless"
+  decorations: buttonless
   padding:
     x: 6
     x: 6
@@ -19,7 +19,8 @@ window:
 live_config_reload: true
 
 scrolling:
-  history: 0
+  history: 10000
+  multiplier: 3
 
 font:
   normal: 
