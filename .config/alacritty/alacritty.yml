@@ -11,6 +11,13 @@ window:
 
 live_config_reload: true
 
+shell:
+  program: /opt/homebrew/bin/fish
+  args:
+    - --login
+    - --command
+    - "tmux new-session -A -D -s main"
+
 scrolling:
   history: 2000
   multiplier: 20
