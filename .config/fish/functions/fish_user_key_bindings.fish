@@ -1,8 +1,13 @@
 function fish_user_key_bindings
-  # vim-like
-  bind \cl forward-char
-  bind \ch backward-char
+    # fzf
+    bind \cf fzf_change_directory
 
-  # prevent iterm2 from closing when typing Ctrl-D (EOF)
-  bind \cd delete-char
+    # vim-like
+    bind \cl forward-char
+
+    # prevent iterm2 from closing when typing Ctrl-D (EOF)
+    bind \cd delete-char
 end
+
+# fzf plugin
+fzf_configure_bindings --directory=\co
