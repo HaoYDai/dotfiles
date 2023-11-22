@@ -1,6 +1,11 @@
-require("config.base")
-require("config.highlights")
-require("config.maps")
+if vim.loader then
+  vim.loader.enable()
+end
 
--- lazy.nvim plugin manager
+_G.dd = function(...)
+  require("util.debug").dump(...)
+end
+vim.print = _G.dd
+
 require("config.lazy")
+
