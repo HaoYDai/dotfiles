@@ -12,6 +12,9 @@ end
 # make
 set -x PATH /opt/homebrew/opt/make/libexec/gnubin $PATH
 
+# gcc-arm-none-eabi
+#set -x PATH /opt/gcc-arm-none-eabi-10.3-2021.10/bin $PATH
+
 if type -q eza
     alias ll "eza -l -g --icons"
     alias lla "ll -a"
