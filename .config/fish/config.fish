@@ -16,6 +16,7 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias g git
 command -qv nvim && alias vim nvim
+command -qv nvim && alias vi nvim
 
 set -gx EDITOR nvim
 
@@ -41,6 +42,20 @@ switch (uname)
     case '*'
 end
 
+set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
+if test -f $LOCAL_CONFIG
+    source $LOCAL_CONFIG
+end
+
+starship init fish | source
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.fish 2>/dev/null || :
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Local config
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
     source $LOCAL_CONFIG
