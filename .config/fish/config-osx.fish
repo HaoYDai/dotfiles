@@ -1,6 +1,11 @@
 # Homebrew
 fish_add_path --path /opt/homebrew/bin
 export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.fish 2>/dev/null || :
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
