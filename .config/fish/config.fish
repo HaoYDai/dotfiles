@@ -15,6 +15,7 @@ alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
 alias g git
+alias tmx "tmux -u new -A -s main"
 command -qv nvim && alias vim nvim
 command -qv nvim && alias vi nvim
 
