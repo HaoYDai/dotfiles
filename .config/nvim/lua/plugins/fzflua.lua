@@ -4,22 +4,49 @@ return {
     -- dependencies = { "nvim-tree/nvim-web-devicons" },
     -- or if using mini.icons/mini.nvim
     dependencies = { "echasnovski/mini.icons" },
-    opts = {},
-    keys={
-        { 
-            "<leader>ff",
-            function() require('fzf-lua').files() end,
-            desc="[F]ind [F]iles"
+    opts = {
+        keymap = {
+            fzf = {
+                ["ctrl-j"] = "down",
+                ["ctrl-k"] = "up",
+            },
         },
-        { 
-            "<leader>fg",
-            function() require('fzf-lua').live_grep() end,
-            desc="[F]ind by [g]repping in project directory"
+    },
+    keys = {
+        {
+            "<leader>fb",
+            function()
+                require("fzf-lua").builtin()
+            end,
+            desc = "[F]ind [B]uiltin FZF",
         },
-        { 
+        {
             "<leader>fc",
-            function() require('fzf-lua').files({cwd=vim.fn.stdpath("config")}) end,
-            desc="[F]ind in neovim [c]onfiguration"
+            function()
+                require("fzf-lua").files({ cwd = vim.fn.stdpath("config") })
+            end,
+            desc = "[F]ind file in neovim [C]onfiguration",
+        },
+        {
+            "<leader>fd",
+            function()
+                require("fzf-lua").diagnostics_document()
+            end,
+            desc = "[F]ind [D]iagnostics",
+        },
+        {
+            "<leader>ff",
+            function()
+                require("fzf-lua").files()
+            end,
+            desc = "[F]ind [F]iles",
+        },
+        {
+            "<leader>fg",
+            function()
+                require("fzf-lua").live_grep()
+            end,
+            desc = "[F]ind by [G]repping in project directory",
         },
         {
             "<leader>fh",
@@ -36,11 +63,18 @@ return {
             desc = "[F]ind [K]eymaps",
         },
         {
-            "<leader>fb",
+            "<leader>fo",
             function()
-                require("fzf-lua").builtin()
+                require("fzf-lua").oldfiles()
             end,
-            desc = "[F]ind [B]uiltin FZF",
+            desc = "[F]ind [O]ld Files",
+        },
+        {
+            "<leader>fr",
+            function()
+                require("fzf-lua").resume()
+            end,
+            desc = "[F]ind [R]esume",
         },
         {
             "<leader>fw",
@@ -57,28 +91,7 @@ return {
             desc = "[F]ind current [W]ORD",
         },
         {
-            "<leader>fd",
-            function()
-                require("fzf-lua").diagnostics_document()
-            end,
-            desc = "[F]ind [D]iagnostics",
-        },
-        {
-            "<leader>fr",
-            function()
-                require("fzf-lua").resume()
-            end,
-            desc = "[F]ind [R]esume",
-        },
-        {
-            "<leader>fo",
-            function()
-                require("fzf-lua").oldfiles()
-            end,
-            desc = "[F]ind [O]ld Files",
-        },
-        {
-            "<leader><leader>",
+            "<leader>,",
             function()
                 require("fzf-lua").buffers()
             end,
@@ -91,5 +104,5 @@ return {
             end,
             desc = "[/] Live grep the current buffer",
         },
-    }
+    },
 }
