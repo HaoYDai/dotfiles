@@ -12,7 +12,7 @@ set -g theme_hostname always
 # aliases
 alias ls "ls -p -G"
 alias la "ls -A"
-alias ll "ls -l"
+alias ll "eza -l -g --icons"
 alias lla "ll -A"
 alias lg lazygit
 alias zj zellij
