@@ -16,11 +16,11 @@ return {
     },
     keys = {
         {
-            "<leader>cf",
+            "<leader>cF",
             function()
                 require("conform").format({ lsp_format = "fallback" })
             end,
-            desc = "Format current file",
+            desc = "[c]onform [F]ormat current file",
         },
     },
 }
